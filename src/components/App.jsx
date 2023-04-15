@@ -9,6 +9,7 @@ import { CommonRoute } from './CommonRout/CommonRout';
 import { refreshUsers } from 'redux/auth/operation';
 import { Home } from 'pages/Home';
 import Layout from './Layout/layout';
+
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
 const Contacts = lazy(() => import('../pages/Contacts'));
 const LoginPage = lazy(() => import('../pages/LoginPage'));

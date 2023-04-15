@@ -10,12 +10,12 @@ export const ContactForm = () => {
     event.preventDefault();
     const form = event.target;
     const name = event.target.name.value;
-    const phone = event.target.number.value;
+    const number = event.target.number.value;
     if (contacts.find(item => item.name.toLowerCase() === name.toLowerCase())) {
       return alert(`${name} вже в книзі контакті`);
     }
     form.reset();
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
   };
 
   return (

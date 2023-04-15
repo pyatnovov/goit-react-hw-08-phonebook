@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getContacts, getFilter } from 'redux/contacts/selectors';
 import { deleteContact } from 'redux/contacts/operations';
 
-export const ContactList = () => {
+const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
   const filterValue = useSelector(getFilter).toLowerCase();
@@ -22,7 +22,7 @@ export const ContactList = () => {
     <ul>
       {visibleContact.map(contact => (
         <li key={contact.id}>
-          {contact.name}: {contact.phone}
+          {contact.name}: {contact.number}
           <button type="button" name={contact.id} onClick={handleDelete}>
             Delete
           </button>
@@ -31,3 +31,4 @@ export const ContactList = () => {
     </ul>
   );
 };
+export default ContactList;
