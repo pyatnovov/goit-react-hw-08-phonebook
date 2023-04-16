@@ -2,20 +2,21 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Navigation from 'components/Navigation/navigation';
+import { Container, Header } from './layout.styled';
 
 const Layout = () => {
   return (
-    <section>
-      <header>
+    <Container>
+      <Header>
         <Navigation />
-      </header>
+      </Header>
 
       <div>
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
       </div>
-    </section>
+    </Container>
   );
 };
 
